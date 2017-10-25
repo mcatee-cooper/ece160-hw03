@@ -31,10 +31,12 @@ void print_student(Mode m, Student s) {
 }
 
 int main(int argc, char* argv[]) {
+  /* declarations */
   int idx = 0;
-  int mode_num = atoi(argv[1]);
-  Mode mode_name = (Mode)mode_num;
+  Mode mode_name = (Mode)atoi(argv[1]);
   Student s[argc-2];
+  /* loop over argv in 4's, */
+  /* append to s, and print */
   for (int i = 2;i<argc;i+=4) { 
     s[idx].first_name = argv[i];
     s[idx].last_name = argv[i+1];
